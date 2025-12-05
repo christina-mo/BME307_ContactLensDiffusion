@@ -42,12 +42,17 @@ Output (printed):
   
 ### Usage example:
 #Parameters obtained from Verofilcon A parameters at sea-level:
+
 thickness = 0.009 
+
 Dk_lens = 90e-11
+
 Pair = 155
 
 #Solve P distribution
+
 x, P = O2(thickness, Dk_lens, Pair)
 
 #Extract layer and boundary specific P statistics
+
 stats(x, P)
