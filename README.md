@@ -8,6 +8,12 @@ The P distribution is represented across the cornea, which is represented as thr
 * L: thickness
 * D: diffusion coefficient
 
+### Dependencies 
+* numpy
+* scipy
+* matplotlib
+* pandas
+
 The key functions are listed below:
 ### O2(thickness, Dk_lens, Pair)
 Solves for oxygen tension distribution across all 3 cornea layers and the lens using:
@@ -23,5 +29,19 @@ Outputs:
 * x: spatial grid (x[0] = anterior chamber, x[-1] surface of the lens) (cm)
 * P: oxygen tension at each corresponding gridpoint (mmHg)
 
-  
+### stats(x, P):
+Post-solving function used to calculate and print relevant oxygen tension values:
+* Oxygen tension at each layer interface
+* Average oxygen tension in the endothelium, stroma, epithelium, lens, and overall cornea
 
+### Usage example:
+#Parameters obtained from Verofilcon A parameters at sea-level:
+thickness = 0.009 
+Dk_lens = 90e-11
+Pair = 155
+
+#Solve P distribution
+x, P = O2(thickness, Dk_lens, Pair)
+
+#Extract layer and boundary specific P statistics
+stats(x, P)
