@@ -30,10 +30,16 @@ Outputs:
 * P: oxygen tension at each corresponding gridpoint (mmHg)
 
 ### stats(x, P):
-Post-solving function used to calculate and print relevant oxygen tension values:
+Post-solving function used to calculate and print relevant oxygen tension values.
+
+Input (both the returned variables from function O2):
+* x: spatial grid
+* P: oxygen tension at each corresponding gridpoint 
+
+Output (printed):
 * Oxygen tension at each layer interface
 * Average oxygen tension in the endothelium, stroma, epithelium, lens, and overall cornea
-
+  
 ### Usage example:
 #Parameters obtained from Verofilcon A parameters at sea-level:
 thickness = 0.009 
