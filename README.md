@@ -13,10 +13,12 @@ The key functions are listed below:
 Solves for oxygen tension distribution across all 3 cornea layers and the lens using:
 * Nonlinear finite-difference method
 * SciPy root solver
+
 Inputs:
 * thickness: contact lens thickness (cm)
 * Dk_lens: lens oxygen permeability ((cm^2 mL O2 / s mL mmHg)
 * Pair: oxygen tension in the atmosphere (mmHg), which is only affected by altitude changes
+
 Outputs:
 * x: spatial grid (x[0] = anterior chamber, x[-1] surface of the lens) (cm)
 * P: oxygen tension at each corresponding gridpoint (mmHg)
